@@ -1,0 +1,420 @@
+
+.navbar {
+    background-color: #0d6efd !important;  /* #0d6efd; #0277BD Azul del nav */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Agregar sombra */
+    padding: 0.5rem 0; /* Menos padding vertical */
+}
+
+.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.9)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.nav-link{
+    font-size: 1.5rem;
+    font-family: Roboto, sans-serif;
+    font-weight: 800;
+}
+
+
+
+
+/* Hover para los links del nav */
+.nav-link:hover {
+    color: #ffc107 !important; /* Color amarillo dorado */
+    transform: translateY(-2px); /* Pequeño movimiento hacia arriba */
+}
+
+
+.btn-login {
+    background-color: #212529;
+    color: #ffffff;
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.25rem;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+}
+
+.btn-login:hover {
+    background-color: #000000;
+    transform: scale(1.05);
+    color: #ffffff;
+}
+
+
+/* ========== SECCIÓN C ========== */
+
+/* ========== IMPORTAR FUENTE ROBOTO ========== */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+/* ========== SECCIÓN SOLICITUD ========== */
+#solicitud {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    min-height: 100vh;
+    padding: 4rem 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* ========== ENCABEZADO DEL FORMULARIO ========== */
+.form-header {
+    margin-bottom: 3rem;
+}
+
+.form-main-title {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: #212529;
+    margin-bottom: 1rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+.form-subtitle {
+    font-size: 1.125rem;
+    color: #6c757d;
+    font-weight: 400;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* ========== CONTENEDOR DEL FORMULARIO ========== */
+.form-wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* ========== GRUPOS DE FORMULARIO ========== */
+.form-group {
+    margin-bottom: 2rem;
+}
+
+.form-label {
+    display: block;
+    font-weight: 700;
+    color: #212529;
+    margin-bottom: 0.75rem;
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* ========== INPUTS Y TEXTAREAS ========== */
+.form-control {
+    width: 100%;
+    padding: 1rem 1.25rem;
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+    color: #212529;
+    background-color: #f8f9fa;
+    border: 2px solid #dee2e6;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.form-control:focus {
+    background-color: #ffffff;
+    border-color: #0d6efd;
+    outline: none;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.15);
+}
+
+.form-control::placeholder {
+    color: #adb5bd;
+    font-weight: 400;
+}
+
+textarea.form-control {
+    resize: vertical;
+    min-height: 150px;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+}
+
+/* ========== RADIO BUTTONS (TIPO DE SERVICIO) ========== */
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+legend {
+    padding: 0;
+    margin-bottom: 1rem;
+}
+
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.radio-item {
+    position: relative;
+}
+
+.radio-input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.radio-label {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.25rem 1.5rem;
+    background-color: #f8f9fa;
+    border: 2px solid #dee2e6;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.radio-icon {
+    font-size: 1.75rem;
+    flex-shrink: 0;
+}
+
+.radio-text {
+    flex: 1;
+}
+
+.radio-label:hover {
+    background-color: #e9ecef;
+    border-color: #0d6efd;
+}
+
+.radio-input:checked + .radio-label {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+    color: #ffffff;
+}
+
+.radio-input:focus + .radio-label {
+    outline: 2px solid #0d6efd;
+    outline-offset: 2px;
+}
+
+/* ========== TEXTOS AUXILIARES ========== */
+.form-text {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 0.875rem;
+    color: #6c757d;
+    font-style: italic;
+}
+
+.char-counter {
+    text-align: right;
+    margin-top: 0.5rem;
+    font-size: 0.875rem;
+    color: #6c757d;
+    font-weight: 500;
+}
+
+/* ========== MENSAJES DE VALIDACIÓN ========== */
+.invalid-feedback {
+    display: none;
+    margin-top: 0.5rem;
+    font-size: 0.875rem;
+    color: #dc3545;
+    font-weight: 500;
+}
+
+.form-control.is-invalid,
+.radio-input.is-invalid + .radio-label {
+    border-color: #dc3545;
+}
+
+.form-control.is-invalid:focus {
+    border-color: #dc3545;
+    box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.15);
+}
+
+.form-control.is-invalid ~ .invalid-feedback,
+.radio-input.is-invalid ~ .invalid-feedback {
+    display: block;
+}
+
+/* ========== BOTÓN DE ENVÍO ========== */
+.btn-submit {
+    width: 100%;
+    padding: 1.25rem 2rem;
+    font-size: 1.125rem;
+    font-weight: 900;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.5px;
+    color: #ffffff;
+    background: linear-gradient(135deg, #0d6efd 0%, #0056b3 100%);
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 20px rgba(13, 110, 253, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+}
+
+.btn-icon {
+    font-size: 1.5rem;
+}
+
+.btn-submit:hover {
+    background: linear-gradient(135deg, #0056b3 0%, #003d82 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(13, 110, 253, 0.4);
+}
+
+.btn-submit:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 15px rgba(13, 110, 253, 0.3);
+}
+
+.btn-submit:focus {
+    outline: 2px solid #0d6efd;
+    outline-offset: 2px;
+}
+
+/* ========== MENSAJE DE CONFIANZA ========== */
+.trust-message {
+    margin-top: 1.5rem;
+}
+
+.trust-text {
+    font-size: 0.9rem;
+    color: #6c757d;
+    font-weight: 500;
+    margin: 0;
+    padding: 1rem;
+    background-color: #e7f3ff;
+    border-radius: 10px;
+    border-left: 4px solid #0d6efd;
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+@media (max-width: 768px) {
+    #solicitud {
+        padding: 2rem 0;
+    }
+
+    .form-wrapper {
+        padding: 2rem 1.5rem;
+        margin: 0 2.5%;
+        width: 95%;
+        max-width: 95%;
+    }
+
+    .form-main-title {
+        font-size: 2rem;
+    }
+
+    .form-subtitle {
+        font-size: 1rem;
+    }
+
+    .radio-label {
+        padding: 1rem 1.25rem;
+    }
+
+    .radio-icon {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .form-wrapper {
+        padding: 1.5rem 1rem;
+    }
+
+    .form-main-title {
+        font-size: 1.75rem;
+    }
+
+    .btn-submit {
+        padding: 1rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    .radio-group {
+        gap: 0.75rem;
+    }
+
+    .radio-label {
+        padding: 0.875rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+
+
+/* ========== SECCIÓN CONTACTO ========== */
+
+
+footer a.text-light:hover {
+  color: #0d6efd !important; /* Azul de Bootstrap */
+  transform: translateY(-2px);
+}
+
+footer {
+    
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    z-index: 10;
+    background-color: #ffc107;/*   ;#ffc107 ,#FFA000,#EF6C00 AGREGAR ESTA LÍNEA */
+    color: #212529; /* AGREGAR ESTA LÍNEA */
+    padding: 1rem 0; /* AGREGAR ESTA LÍNEA */
+}
+
+
+
+
+footer a {
+     font-size: 1.5rem;
+    font-family: Roboto, sans-serif;
+    font-weight: 800;
+    color: #212529 !important;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.map-container {
+    width: 100%;
+    height: 200px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .service-img {
+        height: 200px;
+    }
+    
+    .service-card .card-body {
+        padding: 1.5rem;
+    }
+}

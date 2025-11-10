@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Página de Inicio - Sitio Web Profesional</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/contacto.css" rel="stylesheet" />
+    <meta
+      name="description"
+      content="Descripción concisa y atractiva de tu página web (máximo 160 caracteres). Palabras clave aquí."
+    />
+    <meta
+      name="keywords"
+      content="web profesional, programación, front-end, diseño web, (Tus temas clave)"
+    />
+    <meta name="author" content="Tu Nombre o Nombre de tu Empresa" />
+    <link rel="icon" type="image/png" href="imagenes/1.png" />
+
+    <!-- Bootstrap Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css"
+    />
+  </head>
+  <body>
+    <header>
+      <!-- Barra de navegación -->
+      <nav class="navbar navbar-expand-lg">
+        <div class="container d-flex ms-3">
+          <!-- Logo -->
+          <!-- Logo: reducimos un poco el margin-end para que no se separe -->
+          <a class="navbar-brand fw-bold me-2" ref="#">
+            <img
+              src="imagenes/1.png"
+              alt="Logo"
+              style="height: 62px; width: 76px"
+            />
+          </a>
+
+          <!-- Botón hamburguesa (visible en móviles) -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#menuPrincipal"
+            aria-controls="menuPrincipal"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Menú -->
+          <div
+            class="collapse navbar-collapse justify-content-center"
+            id="menuPrincipal"
+          >
+            <ul class="navbar-nav gap-5 ms-auto mx-auto text-center">
+              <li class="nav-item">
+                <a class="nav-link active" href="index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="servicios.html">Servicios</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="solicitar.html">Solicitar</a>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="#">FAQ</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+            </ul>
+            <!-- Botón Login -->
+            <a href="#" class="btn-login ms-3">Login</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="contacto" class="py-3">
+        <div class="container">
+          <!-- Título de la sección -->
+          <div class="row mb-1">
+            <div class="col-12 text-center">
+              <h1 class="display-4 fw-bold mb-2">Contacto</h1>
+              <p class="lead text-muted">Estamos aquí para ayudarte</p>
+            </div>
+          </div>
+
+          <div class="row g-4 align-items-start">
+            <!-- Columna izquierda: Información de contacto AGRUPADA -->
+            <div class="col-lg-5 col-md-6">
+              <div class="contact-info-unified">
+                <h2 class="contact-main-title mb-4">Información de Contacto</h2>
+
+                <!-- Ubicación -->
+                <div class="info-item mb-4">
+                  <div class="info-icon">
+                    <i class="bi bi-geo-alt-fill"></i>
+                  </div>
+                  <div class="info-content">
+                    <h3 class="info-title">Ubicación</h3>
+                    <p class="info-text">
+                      Calle 9 #15-45, Barrio Obrero<br />
+                      Cali, Valle del Cauca, Colombia
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Teléfonos -->
+                <div class="info-item mb-4">
+                  <div class="info-icon">
+                    <i class="bi bi-telephone-fill"></i>
+                  </div>
+                  <div class="info-content">
+                    <h3 class="info-title">Teléfonos</h3>
+                    <p class="info-text">
+                      <a href="tel:+5723744545">Tel: (2) 374 4545</a><br />
+                      <a href="tel:+573117191963">Cel: 311 719 19 63</a>
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Correos -->
+                <div class="info-item">
+                  <div class="info-icon">
+                    <i class="bi bi-envelope-fill"></i>
+                  </div>
+                  <div class="info-content">
+                    <h3 class="info-title">Correos Electrónicos</h3>
+                    <p class="info-text">
+                      <a href="mailto:info@seamingenieria.com"
+                        >info@seamingenieria.com</a
+                      ><br />
+                      <a href="mailto:ventas@seamingenieria.com"
+                        >ventas@seamingenieria.com</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Columna derecha: Formulario de contacto MEJORADO -->
+            <div class="col-lg-7 col-md-6">
+              <div class="contact-form-container">
+                <h2 class="form-title mb-4">Envíanos un Mensaje</h2>
+                <form id="contactForm" class="contact-form">
+                  <!-- Nombre con label visible -->
+                  <div class="mb-4">
+                    <label for="nombre" class="form-label"
+                      >Nombre completo *</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control form-control-lg"
+                      id="nombre"
+                      name="nombre"
+                      placeholder="Ej: Juan Pérez"
+                      required
+                      autocomplete="name"
+                    />
+                  </div>
+
+                  <!-- Email con label visible -->
+                  <div class="mb-4">
+                    <label for="email" class="form-label"
+                      >Correo electrónico *</label
+                    >
+                    <input
+                      type="email"
+                      class="form-control form-control-lg"
+                      id="email"
+                      name="email"
+                      placeholder="ejemplo@correo.com"
+                      required
+                      autocomplete="email"
+                    />
+                  </div>
+
+                  <!-- Teléfono con label visible y type tel -->
+                  <div class="mb-4">
+                    <label for="telefono" class="form-label">Teléfono *</label>
+                    <input
+                      type="tel"
+                      class="form-control form-control-lg"
+                      id="telefono"
+                      name="telefono"
+                      placeholder="300 123 4567"
+                      required
+                      autocomplete="tel"
+                      pattern="[0-9\s\-\+\(\)]+"
+                    />
+                  </div>
+
+                  <!-- Mensaje con label visible y mayor altura -->
+                  <div class="mb-4">
+                    <label for="mensaje" class="form-label">Mensaje *</label>
+                    <textarea
+                      class="form-control form-control-lg"
+                      id="mensaje"
+                      name="mensaje"
+                      rows="6"
+                      placeholder="Cuéntanos cómo podemos ayudarte..."
+                      required
+                    ></textarea>
+                  </div>
+
+                  <!-- Botón mejorado: más grande, azul, 100% ancho -->
+                  <div class="d-grid">
+                    <button type="submit" class="btn-enviar-mejorado">
+                      <i class="bi bi-send-fill me-2"></i>Enviar Mensaje
+                    </button>
+                  </div>
+
+                  <p class="form-note mt-3 text-center">
+                    * Campos obligatorios
+                  </p>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="pt-4 pb-3 mt-1">
+      <div class="container text-center text-md-start">
+        <div class="row align-items-center">
+          <!-- Columna 1: Logo y nombre -->
+          <div class="col-md-4 mb-3 mb-md-0 text-center text-md-start">
+            <h5 class="fw-bold">SEAM INGENIERIA</h5>
+            <p class="small mb-0">Innovación, calidad y confianza.</p>
+            <p class="small mb-0">Cali, Valle del Cauca, Colombia</p>
+          </div>
+
+          <!-- Columna 2: Enlaces rápidos -->
+          <div class="col-md-4 mb-0 mb-md-0">
+            <div class="map-container">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3982.5034416842186!2d-76.51546302603748!3d3.4700122510985643!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e30a63089507a79%3A0x92acb8bc88159ea7!2sSEAM%20Ingenier%C3%ADa%20E.U.!5e0!3m2!1ses!2sco!4v1762307461833!5m2!1ses!2sco"
+                width="600"
+                height="450"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                width="100%"
+                height="200"
+                style="border: 0; border-radius: 8px"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              >
+              </iframe>
+            </div>
+          </div>
+
+          <!-- Columna 3: Redes sociales -->
+          <div class="col-md-4 text-center text-md-end">
+            <a href="#" class="text-light me-3 fs-5"
+              ><i class="bi bi-facebook"></i
+            ></a>
+            <a href="#" class="text-light me-3 fs-5"
+              ><i class="bi bi-instagram"></i
+            ></a>
+            <a href="#" class="text-light me-3 fs-5"
+              ><i class="bi bi-twitter-x"></i
+            ></a>
+            <a href="#" class="text-light fs-5"
+              ><i class="bi bi-linkedin"></i
+            ></a>
+          </div>
+        </div>
+
+        <hr class="border-light my-3" />
+
+        <div class="text-center small">
+          © 2025 SEAM INGENIERIA — Todos los derechos reservados.
+        </div>
+      </div>
+    </footer>
+    <script src="javascript/bootstrap.bundle.min.js"></script>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

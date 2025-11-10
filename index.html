@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Página de Inicio - Sitio Web Profesional</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <meta
+      name="description"
+      content="Descripción concisa y atractiva de tu página web (máximo 160 caracteres). Palabras clave aquí."
+    />
+    <meta
+      name="keywords"
+      content="web profesional, programación, front-end, diseño web, (Tus temas clave)"
+    />
+    <meta name="author" content="Tu Nombre o Nombre de tu Empresa" />
+    <link rel="icon" type="image/png" href="imagenes/1.png" />
+
+    <!-- Bootstrap Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <!-- Barra de navegación -->
+      <nav class="navbar navbar-expand-lg">
+        <div class="container d-flex ms-3">
+          <!-- Logo -->
+          <!-- Logo: reducimos un poco el margin-end para que no se separe -->
+          <a class="navbar-brand fw-bold me-2" ref="#">
+            <img
+              src="imagenes/1.png"
+              alt="Logo"
+              style="height: 62px; width: 76px"
+            />
+          </a>
+
+          <!-- Botón hamburguesa (visible en móviles) -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#menuPrincipal"
+            aria-controls="menuPrincipal"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Menú -->
+          <div
+            class="collapse navbar-collapse justify-content-center"
+            id="menuPrincipal"
+          >
+            <ul class="navbar-nav gap-5 ms-auto mx-auto text-center">
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="servicios.html">Servicios</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contacto.html">Contacto</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="solicitar.html">Solicitar</a>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="#">FAQ</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+            </ul>
+            <!-- Botón Login -->
+            <a href="#" class="btn-login ms-3">Login</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div
+          id="carouselExampleCaptions"
+          class="carousel slide"
+          data-bs-ride="carousel"
+          data-bs-interval="3000"
+        >
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="imagenes/automation.jpg"
+                class="d-block w-100"
+                alt="..."
+              />
+              <div class="carousel-caption">
+                <h5>Automatización</h5>
+                <p>
+                  Some representative placeholder content for the first slide.
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                src="imagenes/maintanace electric.webp"
+                class="d-block w-100"
+                alt="..."
+              />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Mantenimiento Eléctrico</h5>
+                <p>
+                  Some representative placeholder content for the second slide.
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                src="imagenes/maintanace.webp"
+                class="d-block w-100"
+                alt="..."
+              />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Mantenimiento Mecanico</h5>
+                <p>
+                  Some representative placeholder content for the third slide.
+                </p>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </section>
+      <!-- Aquí irá el contenido principal de la página -->
+      <!-- Sección Hero 
+      <section id="inicio" class="hero">
+        <h1>Impulsamos tu presencia digital</h1>
+        <p>
+          Ofrecemos soluciones profesionales en diseño web, mantenimiento y
+          automatización de procesos.
+        </p>
+        <a href="#contacto" class="cta">Contáctanos</a>
+      </section>
+
+       Sección de Servicios 
+      <section id="servicios" class="servicios">
+        <h2>Nuestros Servicios</h2>
+        <p>
+          Descubre cómo podemos ayudarte a crecer con herramientas digitales
+          eficientes y modernas.
+        </p>
+        <ul>
+          <li>
+            <strong>Diseño Web Profesional:</strong> Páginas optimizadas para
+            SEO y adaptables a cualquier dispositivo.
+          </li>
+          <li>
+            <strong>Mantenimiento Técnico:</strong> Monitoreo y actualización
+            constante de tus sistemas.
+          </li>
+          <li>
+            <strong>Automatización Empresarial:</strong> Implementamos
+            soluciones que mejoran tu productividad.
+          </li>
+        </ul>
+      </section>-->
+    </main>
+
+    <footer class="pt-4 pb-3 mt-1">
+      <div class="container text-center text-md-start">
+        <div class="row align-items-center">
+          <!-- Columna 1: Logo y nombre -->
+          <div class="col-md-4 mb-3 mb-md-0 text-center text-md-start">
+            <h5 class="fw-bold">SEAM INGENIERIA</h5>
+            <p class="small mb-0">Innovación, calidad y confianza.</p>
+            <p class="small mb-0">Cali, Valle del Cauca, Colombia</p>
+          </div>
+
+          <!-- Columna 2: Enlaces rápidos -->
+          <div class="col-md-4 mb-0 mb-md-0">
+            <div class="map-container">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3982.5034416842186!2d-76.51546302603748!3d3.4700122510985643!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e30a63089507a79%3A0x92acb8bc88159ea7!2sSEAM%20Ingenier%C3%ADa%20E.U.!5e0!3m2!1ses!2sco!4v1762307461833!5m2!1ses!2sco"
+                width="600"
+                height="450"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                width="100%"
+                height="200"
+                style="border: 0; border-radius: 8px"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              >
+              </iframe>
+            </div>
+          </div>
+
+          <!-- Columna 3: Redes sociales -->
+          <div class="col-md-4 text-center text-md-end">
+            <a href="#" class="text-light me-3 fs-5"
+              ><i class="bi bi-facebook"></i
+            ></a>
+            <a href="#" class="text-light me-3 fs-5"
+              ><i class="bi bi-instagram"></i
+            ></a>
+            <a href="#" class="text-light me-3 fs-5"
+              ><i class="bi bi-twitter-x"></i
+            ></a>
+            <a href="#" class="text-light fs-5"
+              ><i class="bi bi-linkedin"></i
+            ></a>
+          </div>
+        </div>
+
+        <hr class="border-light my-3" />
+
+        <div class="text-center small">
+          © 2025 SEAM INGENIERIA — Todos los derechos reservados.
+        </div>
+      </div>
+    </footer>
+    <script src="javascript/bootstrap.bundle.min.js"></script>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
