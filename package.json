@@ -1,0 +1,23 @@
+{
+  "name": "proyectoseam",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LuisRoseroSolarte/proyectoSEAM.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LuisRoseroSolarte/proyectoSEAM/issues"
+  },
+  "homepage": "https://github.com/LuisRoseroSolarte/proyectoSEAM#readme",
+  "dependencies": {
+    "open-props": "^1.7.16"
+  }
+}

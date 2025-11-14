@@ -40,9 +40,10 @@
           <!-- Logo: reducimos un poco el margin-end para que no se separe -->
           <a class="navbar-brand fw-bold me-2" ref="#">
             <img
-              src="imagenes/1.png"
+              src="imagenes/logoia2.png"
               alt="Logo"
-              style="height: 62px; width: 76px"
+              class="logo-animado"
+              style="height: 82px; width: 186px"
             />
           </a>
 
@@ -75,52 +76,95 @@
               <li class="nav-item">
                 <a class="nav-link" href="solicitar.html">Solicitar</a>
               </li>
-              <li class="nav-item"><a class="nav-link" href="#">FAQ</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+              <li class="nav-item">
+                <a class="nav-link" href="fag.html">FAQ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="blog.html">Blog</a>
+              </li>
             </ul>
             <!-- Botón Login -->
-            <a href="#" class="btn-login ms-3">Login</a>
+            <a href="#" class="btn-login ms-3 btn-lg">
+              <i class="bi bi-person-circle me-2"></i>Login
+            </a>
           </div>
         </div>
       </nav>
     </header>
 
     <main>
-      <section id="servicios" class="py-3">
+      <section id="servicios" class="py-5">
         <div class="container">
           <!-- Título de la sección -->
           <div class="row mb-5">
             <div class="col-12 text-center">
-              <h2 class="display-5 fw-bold mb-3">Nuestros Servicios</h2>
+              <h2 class="display-5 fw-bold mb-3">
+                Servicios Eléctroneumaticos Automatización y Montajes
+              </h2>
               <p class="lead text-muted">
                 Soluciones integrales en ingeniería para tu empresa
               </p>
             </div>
           </div>
 
-          <!-- Las 3 columnas -->
-          <div class="row g-4">
-            <!-- Columna 1: Mantenimiento -->
+          <!-- Primera fila: 3 servicios principales -->
+          <div class="row g-4 mb-4">
+            <!-- Servicio 1: Mantenimiento Industrial -->
             <div class="col-md-4">
               <div class="card service-card h-100">
                 <img
                   src="imagenes/maintanace.webp"
                   class="card-img-top service-img"
-                  alt="Mantenimiento"
+                  alt="Mantenimiento Industrial"
                 />
                 <div class="card-body text-center">
-                  <h3 class="card-title fw-bold">Mecanica</h3>
+                  <h3 class="card-title fw-bold">Mantenimiento Industrial</h3>
                   <p class="card-text">
-                    Servicios especializados en mantenimiento preventivo y
-                    correctivo para garantizar el óptimo funcionamiento de tus
-                    equipos.
+                    Nuestra oferta de servicios de mantenimiento incluye el
+                    Mantenimiento preventivo, programado y correctivo de plantas
+                    industriales. Realizamos la reconfiguración de módulos
+                    lógicos programables, junto con el mantenimiento y
+                    reparación de motores, generadores y transformadores.
+                    Además, gestionamos el Mantenimiento de Centro de Control de
+                    Motores (CCM) y subestaciones, sistemas de iluminación, y
+                    Sistemas de Emisiones. Finalmente, garantizamos la
+                    funcionalidad de la maquinaria clave mediante el
+                    Mantenimiento de compresores y sistemas neumáticos, y el
+                    Mantenimiento y reparación de bombas industriales.
                   </p>
                   <a href="#contacto" class="btn btn-primary">Solicitar</a>
                 </div>
               </div>
             </div>
 
-            <!-- Columna 2: Automatización -->
+            <!-- Servicio 2: Montajes Electromecánicos -->
+            <div class="col-md-4">
+              <div class="card service-card h-100">
+                <img
+                  src="imagenes/maintanace electric.webp"
+                  class="card-img-top service-img"
+                  alt="Montajes Electromecánicos"
+                />
+                <div class="card-body text-center">
+                  <h3 class="card-title fw-bold">Montajes Electromecánicos</h3>
+                  <p class="card-text">
+                    SEAM INGENIERIA E.U. garantiza el cumplimiento de normas
+                    clave como RETIE y el Código Eléctrico Colombiano, y se
+                    especializa en el montaje completo de plantas, máquinas y
+                    equipos. Esto incluye el Montaje Eléctrico (diseño y
+                    construcción de subestaciones, instalación de redes de
+                    alta/media/baja tensión, y sistemas de puesta a tierra).
+                    Adicionalmente, realizan el Montaje Neumático, que abarca el
+                    diseño e instalación de redes neumáticas y redes para
+                    sistemas de bombeo de agua, además de la reparación de
+                    equipos hidroneumáticos.
+                  </p>
+                  <a href="#contacto" class="btn btn-primary">Solicitar</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Servicio 3: Automatización y Control -->
             <div class="col-md-4">
               <div class="card service-card h-100">
                 <img
@@ -129,30 +173,81 @@
                   alt="Automatización"
                 />
                 <div class="card-body text-center">
-                  <h3 class="card-title fw-bold">Automatización</h3>
+                  <h3 class="card-title fw-bold">Automatización y Control</h3>
                   <p class="card-text">
-                    Implementamos soluciones avanzadas en automatización
-                    industrial para optimizar tus procesos y aumentar la
-                    productividad.
+                    Para garantizar la eficiencia, confiabilidad y seguridad en
+                    los procesos industriales, los sistemas de automatización
+                    son cruciales. SEAM INGENIERIA ofrece soluciones de control
+                    completamente integradas que garantizan un alto desempeño y
+                    ganancia de productividad. Sus servicios principales
+                    incluyen el diseño e instalación de sistemas de control y
+                    automatización, la instalación y configuración de módulos
+                    lógicos programables, el diseño e instalación de paneles y
+                    consolas de control, y la automatización completa de plantas
+                    de producción.
+                  </p>
+                  <a href="#contacto" class="btn btn-primary">Solicitar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Segunda fila: 2 servicios adicionales centrados -->
+          <div class="row g-4 justify-content-center">
+            <!-- Servicio 4: Servicios Especializados -->
+            <div class="col-md-4">
+              <div class="card service-card h-100">
+                <img
+                  src="imagenes/neumatic.jpg"
+                  class="card-img-top service-img"
+                  alt="Servicios Especializados"
+                />
+                <div class="card-body text-center">
+                  <h3 class="card-title fw-bold">Servicios Especializados</h3>
+                  <p class="card-text">
+                    Seam ingeniería E.U. cuenta con el servicio de desmonte,
+                    transporte e izaje de silos de diferentes tamaños
+                    garantizando la preservación de los equipos sin afectar la
+                    integridad de las personas presentes, haciendo uso de
+                    maquinaria certificada, personal calificado y con
+                    experiencia para el desarrollo de la actividad cumpliendo
+                    con las normas de seguridad y salud en el trabajo.<br />El
+                    análisis termográfico, nos permiten identificar la
+                    temperatura de una máquina industrial y comprobar así si se
+                    producen fugas de corriente o sobrecalentamientos. Además,
+                    también es eficaz su uso para comprobar si se producen
+                    pérdidas de aislamiento o fusibles quemados. Es de gran
+                    utilidad para el mantenimiento predictivo en instalaciones
+                    eléctricas. En general, un estudio termográfico permitirá
+                    tener un control exhaustivo de la temperatura de los
+                    elementos que forman parte de una instalación. Y en caso de
+                    que se produzca una anomalía, los dispositivos empleados en
+                    el estudio indicarán el lugar exacto en el que se ha
+                    producido dicha anomalía.
                   </p>
                   <a href="#contacto" class="btn btn-primary">Solicitar</a>
                 </div>
               </div>
             </div>
 
-            <!-- Columna 3: Electricidad -->
+            <!-- Servicio 5: Asistencia Técnica -->
             <div class="col-md-4">
               <div class="card service-card h-100">
                 <img
-                  src="imagenes/maintanace electric.webp"
+                  src="imagenes/IA.jpg"
                   class="card-img-top service-img"
-                  alt="Electricidad"
+                  alt="Asistencia Técnica"
                 />
                 <div class="card-body text-center">
-                  <h3 class="card-title fw-bold">Electricidad</h3>
+                  <h3 class="card-title fw-bold">
+                    Asistencia y Servicio Técnico
+                  </h3>
                   <p class="card-text">
-                    Instalaciones y mantenimiento eléctrico industrial con los
-                    más altos estándares de calidad y seguridad.
+                    SEAM INGENIERIA E.U., cuenta con los medios técnicos,
+                    tecnológicos y humanos para brindar el apoyo requerido por
+                    nuestros clientes en la atención de emergencias en: SISTEMAS
+                    ELECTRICOS SISTEMAS NEUMÁTICOS AUTOMATISMO,SISTEMAS
+                    NEUMÁTICOS AUTOMATISMOS,SISTEMAS HIDRÁULICOS.
                   </p>
                   <a href="#contacto" class="btn btn-primary">Solicitar</a>
                 </div>
@@ -163,30 +258,46 @@
       </section>
     </main>
 
-    <footer class="pt-4 pb-3 mt-1">
-      <div class="container text-center text-md-start">
+    <footer>
+      <div class="container">
         <div class="row align-items-center">
-          <!-- Columna 1: Logo y nombre -->
-          <div class="col-md-4 mb-3 mb-md-0 text-center text-md-start">
-            <h5 class="fw-bold">SEAM INGENIERIA</h5>
-            <p class="small mb-0">Innovación, calidad y confianza.</p>
-            <p class="small mb-0">Cali, Valle del Cauca, Colombia</p>
+          <!-- Columna 1: Información de la empresa -->
+          <!-- Columna 1: Información de la empresa -->
+          <div class="col-md-4 mb-4 mb-md-0 footer-section">
+            <h5 style="font-size: 1.5rem; font-weight: 600">SEAM INGENIERÍA</h5>
+            <div class="contact-info">
+              <p class="mb-2" style="font-size: 1.1rem; color: #000 !important">
+                <i
+                  class="bi bi-lightbulb-fill"
+                  style="color: #000 !important"
+                ></i>
+                Innovación, calidad y confianza.
+              </p>
+              <p class="mb-2" style="font-size: 1.1rem; color: #000 !important">
+                <i
+                  class="bi bi-telephone-fill"
+                  style="color: #000 !important"
+                ></i>
+                (2) 374 4545
+              </p>
+              <p class="mb-2" style="font-size: 1.1rem; color: #000 !important">
+                <i class="bi bi-phone-fill" style="color: #000 !important"></i>
+                3017979077-3207552496-311 7191963
+              </p>
+              <p class="mb-2" style="font-size: 1.1rem; color: #000 !important">
+                <i
+                  class="bi bi-geo-alt-fill"
+                  style="color: #000 !important"
+                ></i>
+                Cali, Valle del Cauca, Colombia
+              </p>
+            </div>
           </div>
-
-          <!-- Columna 2: Enlaces rápidos -->
-          <div class="col-md-4 mb-0 mb-md-0">
+          <!-- Columna 2: Mapa -->
+          <div class="col-md-4 mb-4 mb-md-0 footer-section">
             <div class="map-container">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3982.5034416842186!2d-76.51546302603748!3d3.4700122510985643!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e30a63089507a79%3A0x92acb8bc88159ea7!2sSEAM%20Ingenier%C3%ADa%20E.U.!5e0!3m2!1ses!2sco!4v1762307461833!5m2!1ses!2sco"
-                width="600"
-                height="450"
-                style="border: 0"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-                width="100%"
-                height="200"
-                style="border: 0; border-radius: 8px"
                 allowfullscreen=""
                 loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"
@@ -196,26 +307,30 @@
           </div>
 
           <!-- Columna 3: Redes sociales -->
-          <div class="col-md-4 text-center text-md-end">
-            <a href="#" class="text-light me-3 fs-5"
-              ><i class="bi bi-facebook"></i
-            ></a>
-            <a href="#" class="text-light me-3 fs-5"
-              ><i class="bi bi-instagram"></i
-            ></a>
-            <a href="#" class="text-light me-3 fs-5"
-              ><i class="bi bi-twitter-x"></i
-            ></a>
-            <a href="#" class="text-light fs-5"
-              ><i class="bi bi-linkedin"></i
-            ></a>
+          <div class="col-md-4 footer-section">
+            <h5 class="text-center">Síguenos</h5>
+            <div class="social-links">
+              <a href="#" class="facebook" title="Facebook">
+                <i class="bi bi-facebook"></i>
+              </a>
+              <a href="#" class="instagram" title="Instagram">
+                <i class="bi bi-instagram"></i>
+              </a>
+              <a href="#" class="whatsapp" title="WhatsApp">
+                <i class="bi bi-whatsapp"></i>
+              </a>
+              <a href="#" class="linkedin" title="LinkedIn">
+                <i class="bi bi-linkedin"></i>
+              </a>
+            </div>
           </div>
         </div>
 
-        <hr class="border-light my-3" />
-
-        <div class="text-center small">
-          © 2025 SEAM INGENIERIA — Todos los derechos reservados.
+        <!-- Copyright -->
+        <div class="footer-bottom">
+          <div class="text-center">
+            <p>© 2025 SEAM INGENIERÍA — Todos los derechos reservados.</p>
+          </div>
         </div>
       </div>
     </footer>

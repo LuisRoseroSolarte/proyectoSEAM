@@ -44,9 +44,10 @@
           <!-- Logo: reducimos un poco el margin-end para que no se separe -->
           <a class="navbar-brand fw-bold me-2" ref="#">
             <img
-              src="imagenes/1.png"
+              src="imagenes/logoia2.png"
               alt="Logo"
-              style="height: 62px; width: 76px"
+              class="logo-animado"
+              style="height: 82px; width: 186px"
             />
           </a>
 
@@ -79,11 +80,18 @@
               <li class="nav-item">
                 <a class="nav-link" href="solicitar.html">Solicitar</a>
               </li>
-              <li class="nav-item"><a class="nav-link" href="#">FAQ</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+              <li class="nav-item">
+                <a class="nav-link" href="fag.html">FAQ</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="blog.html">Blog</a>
+              </li>
             </ul>
             <!-- Botón Login -->
-            <a href="#" class="btn-login ms-3">Login</a>
+            <a href="#" class="btn-login ms-3 btn-lg">
+              <i class="bi bi-person-circle me-2"></i>Login
+            </a>
           </div>
         </div>
       </nav>
@@ -114,7 +122,7 @@
                   <div class="info-content">
                     <h3 class="info-title">Ubicación</h3>
                     <p class="info-text">
-                      Calle 9 #15-45, Barrio Obrero<br />
+                      Carrera 4Nte No. 41N – 21 Cali, Valle<br />
                       Cali, Valle del Cauca, Colombia
                     </p>
                   </div>
@@ -129,7 +137,9 @@
                     <h3 class="info-title">Teléfonos</h3>
                     <p class="info-text">
                       <a href="tel:+5723744545">Tel: (2) 374 4545</a><br />
-                      <a href="tel:+573117191963">Cel: 311 719 19 63</a>
+                      <a href="tel:+573117191963"
+                        >Cel: 311 7191963 - 320 7552496 -301 7979077</a
+                      >
                     </p>
                   </div>
                 </div>
@@ -237,30 +247,46 @@
       </section>
     </main>
 
-    <footer class="pt-4 pb-3 mt-1">
-      <div class="container text-center text-md-start">
+    <footer>
+      <div class="container">
         <div class="row align-items-center">
-          <!-- Columna 1: Logo y nombre -->
-          <div class="col-md-4 mb-3 mb-md-0 text-center text-md-start">
-            <h5 class="fw-bold">SEAM INGENIERIA</h5>
-            <p class="small mb-0">Innovación, calidad y confianza.</p>
-            <p class="small mb-0">Cali, Valle del Cauca, Colombia</p>
+          <!-- Columna 1: Información de la empresa -->
+          <!-- Columna 1: Información de la empresa -->
+          <div class="col-md-4 mb-4 mb-md-0 footer-section">
+            <h5 style="font-size: 1.5rem; font-weight: 600">SEAM INGENIERÍA</h5>
+            <div class="contact-info">
+              <p class="mb-2" style="font-size: 1.1rem; color: #000 !important">
+                <i
+                  class="bi bi-lightbulb-fill"
+                  style="color: #000 !important"
+                ></i>
+                Innovación, calidad y confianza.
+              </p>
+              <p class="mb-2" style="font-size: 1.1rem; color: #000 !important">
+                <i
+                  class="bi bi-telephone-fill"
+                  style="color: #000 !important"
+                ></i>
+                (2) 374 4545
+              </p>
+              <p class="mb-2" style="font-size: 1.1rem; color: #000 !important">
+                <i class="bi bi-phone-fill" style="color: #000 !important"></i>
+                3017979077-3207552496-311 7191963
+              </p>
+              <p class="mb-2" style="font-size: 1.1rem; color: #000 !important">
+                <i
+                  class="bi bi-geo-alt-fill"
+                  style="color: #000 !important"
+                ></i>
+                Cali, Valle del Cauca, Colombia
+              </p>
+            </div>
           </div>
-
-          <!-- Columna 2: Enlaces rápidos -->
-          <div class="col-md-4 mb-0 mb-md-0">
+          <!-- Columna 2: Mapa -->
+          <div class="col-md-4 mb-4 mb-md-0 footer-section">
             <div class="map-container">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3982.5034416842186!2d-76.51546302603748!3d3.4700122510985643!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e30a63089507a79%3A0x92acb8bc88159ea7!2sSEAM%20Ingenier%C3%ADa%20E.U.!5e0!3m2!1ses!2sco!4v1762307461833!5m2!1ses!2sco"
-                width="600"
-                height="450"
-                style="border: 0"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-                width="100%"
-                height="200"
-                style="border: 0; border-radius: 8px"
                 allowfullscreen=""
                 loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"
@@ -270,26 +296,30 @@
           </div>
 
           <!-- Columna 3: Redes sociales -->
-          <div class="col-md-4 text-center text-md-end">
-            <a href="#" class="text-light me-3 fs-5"
-              ><i class="bi bi-facebook"></i
-            ></a>
-            <a href="#" class="text-light me-3 fs-5"
-              ><i class="bi bi-instagram"></i
-            ></a>
-            <a href="#" class="text-light me-3 fs-5"
-              ><i class="bi bi-twitter-x"></i
-            ></a>
-            <a href="#" class="text-light fs-5"
-              ><i class="bi bi-linkedin"></i
-            ></a>
+          <div class="col-md-4 footer-section">
+            <h5 class="text-center">Síguenos</h5>
+            <div class="social-links">
+              <a href="#" class="facebook" title="Facebook">
+                <i class="bi bi-facebook"></i>
+              </a>
+              <a href="#" class="instagram" title="Instagram">
+                <i class="bi bi-instagram"></i>
+              </a>
+              <a href="#" class="whatsapp" title="WhatsApp">
+                <i class="bi bi-whatsapp"></i>
+              </a>
+              <a href="#" class="linkedin" title="LinkedIn">
+                <i class="bi bi-linkedin"></i>
+              </a>
+            </div>
           </div>
         </div>
 
-        <hr class="border-light my-3" />
-
-        <div class="text-center small">
-          © 2025 SEAM INGENIERIA — Todos los derechos reservados.
+        <!-- Copyright -->
+        <div class="footer-bottom">
+          <div class="text-center">
+            <p>© 2025 SEAM INGENIERÍA — Todos los derechos reservados.</p>
+          </div>
         </div>
       </div>
     </footer>

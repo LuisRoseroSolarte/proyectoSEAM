@@ -19,7 +19,23 @@
     font-weight: 800;
 }
 
+/*ANIMACIONES */
 
+@import "../node_modules/open-props/open-props.min.css";
+@import "../node_modules/open-props/normalize.min.css";
+
+@keyframes giro-parcial-eje-x {
+  0%   { transform: rotateX(0deg); }
+  50%  { transform: rotateX(60deg); } /* grado máximo hacia adelante */
+  100% { transform: rotateX(0deg); }
+}
+
+.logo-animado {
+  animation: giro-parcial-eje-x 3s ease-in-out infinite alternate;
+  transform-style: preserve-3d; /* necesario para rotación 3D */
+}
+
+/*ANIMACIONES */
 
 
 /* Hover para los links del nav */
@@ -29,15 +45,23 @@
 }
 
 
+/*btn mejorado-----------------------------------------------------------------------*/
 .btn-login {
-    background-color: #212529;
-    color: #ffffff;
+    background-color: #ffc107 !important;
+    color: black;
     padding: 0.5rem 1.5rem;
+    font-size: 23px;
     border-radius: 0.25rem;
     text-decoration: none;
     font-weight: 600;
+    height: auto; /* Cambiado de 3.1rem a auto */
+    width: auto; /* Cambiado de 7rem a auto */
+    min-width: 7rem; /* Para mantener un ancho mínimo */
     transition: background-color 0.3s ease, transform 0.3s ease;
-    display: inline-block;
+    display: inline-flex; /* Cambiado a inline-flex */
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+    gap: 0.5rem; /* Espacio entre ícono y texto */
 }
 
 .btn-login:hover {
@@ -45,6 +69,11 @@
     transform: scale(1.05);
     color: #ffffff;
 }
+
+.btn-login i {
+    font-size: 1.3rem; /* Ajusta el tamaño del ícono */
+}
+/* btn mejorado------------------------------------------------------------------------------*/
 
 
 /* ========== SECCIÓN C ========== */
@@ -89,11 +118,14 @@
     padding: 3rem;
     border-radius: 20px;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    border:4px solid #007bff;
 }
 
 /* ========== GRUPOS DE FORMULARIO ========== */
 .form-group {
     margin-bottom: 2rem;
+   
+    
 }
 
 .form-label {
@@ -101,7 +133,7 @@
     font-weight: 700;
     color: #212529;
     margin-bottom: 0.75rem;
-    font-size: 1rem;
+    font-size: 1.4rem;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -188,6 +220,7 @@ legend {
 
 .radio-text {
     flex: 1;
+    font-size: 1.3rem;
 }
 
 .radio-label:hover {
@@ -363,40 +396,116 @@ legend {
 /* ========== SECCIÓN CONTACTO ========== */
 
 
-footer a.text-light:hover {
-  color: #0d6efd !important; /* Azul de Bootstrap */
-  transform: translateY(-2px);
-}
-
+/* Footer Styles--------------------------------------------------------------------------- */
 footer {
-    
     position: relative;
-    bottom: 0;
     width: 100%;
-    z-index: 10;
-    background-color: #ffc107;/*   ;#ffc107 ,#FFA000,#EF6C00 AGREGAR ESTA LÍNEA */
-    color: #212529; /* AGREGAR ESTA LÍNEA */
-    padding: 1rem 0; /* AGREGAR ESTA LÍNEA */
+    background: linear-gradient(135deg, #ffc107 0%, #ff9800 100%);
+    color: #212529;
+    padding: 0.7rem 0 1rem 0;
+    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
 }
 
-
-
-
-footer a {
-     font-size: 1.5rem;
-    font-family: Roboto, sans-serif;
-    font-weight: 800;
-    color: #212529 !important;
-    text-decoration: none;
-    transition: color 0.3s ease;
+/* Alinear verticalmente las columnas */
+footer .row {
+    align-items: center !important;
 }
 
+/* Efecto decorativo de fondo */
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4);
+    background-size: 300% 300%;
+    animation: gradientShift 8s ease infinite;
+}
+
+@keyframes gradientShift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+/* Columnas del footer */
+.footer-section {
+    padding: 0rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.footer-section h5 {
+    font-weight: 900;
+    font-size: 1.5rem;
+    margin-bottom: 1.2rem;
+    position: relative;
+    display: inline-block;
+}
+
+.footer-section:first-child h5::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: #212529;
+    border-radius: 2px;
+}
+
+/* Información de contacto */
+.contact-info {
+    line-height: 1.8;
+}
+
+.contact-info p {
+    margin-bottom: 0.8rem;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.contact-info p:hover {
+    transform: translateX(5px);
+}
+
+/* Efecto tap para móviles */
+.contact-info p:active {
+    transform: translateX(8px);
+}
+
+.contact-info i {
+    margin-right: 12px;
+    font-size: 1.3rem;
+    color: #212529;
+    flex-shrink: 0;
+}
+
+/* Mapa mejorado */
 .map-container {
     width: 100%;
-    height: 200px;
-    border-radius: 8px;
+    height: 250px;
+    border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+}
+
+.map-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+/* Efecto tap para móviles en el mapa */
+.map-container:active {
+    transform: translateY(-5px) scale(0.98);
 }
 
 .map-container iframe {
@@ -404,6 +513,258 @@ footer a {
     height: 100%;
     border: 0;
 }
+
+/* Redes sociales */
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 55px;
+    height: 55px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid #212529;
+    border-radius: 50%;
+    color: #212529;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+    /* Mejorar táctil en móviles */
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+}
+
+.social-links a::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.8);
+    transform: translate(-50%, -50%);
+    transition: width 0.4s, height 0.4s;
+}
+
+/* Efectos hover para escritorio */
+.social-links a:hover::before {
+    width: 100%;
+    height: 100%;
+}
+
+.social-links a:hover {
+    transform: translateY(-8px) scale(1.1);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    border-color: #212529;
+}
+
+/* Efectos táctiles para móviles */
+.social-links a:active::before {
+    width: 100%;
+    height: 100%;
+}
+
+.social-links a:active {
+    transform: translateY(-8px) scale(1.1);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    border-color: #212529;
+}
+
+.social-links a i {
+    position: relative;
+    z-index: 1;
+    transition: color 0.3s ease;
+}
+
+/* Colores específicos por red social - hover escritorio */
+.social-links a.facebook:hover {
+    background: #1877f2;
+    border-color: #1877f2;
+}
+
+.social-links a.instagram:hover {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    border-color: #bc1888;
+}
+
+.social-links a.whatsapp:hover {
+    background: #25d366;
+    border-color: #25d366;
+}
+
+.social-links a.linkedin:hover {
+    background: #0077b5;
+    border-color: #0077b5;
+}
+
+.social-links a:hover i {
+    color: #fff;
+}
+
+/* Colores específicos por red social - táctil móviles */
+.social-links a.facebook:active {
+    background: #1877f2;
+    border-color: #1877f2;
+}
+
+.social-links a.instagram:active {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    border-color: #bc1888;
+}
+
+.social-links a.whatsapp:active {
+    background: #25d366;
+    border-color: #25d366;
+}
+
+.social-links a.linkedin:active {
+    background: #0077b5;
+    border-color: #0077b5;
+}
+
+.social-links a:active i {
+    color: #fff;
+}
+
+/* Copyright */
+.footer-bottom {
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 2px solid rgba(33, 37, 41, 0.2);
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 0.9rem;
+    opacity: 0.9;
+    font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    footer {
+        padding: 2rem 0 1rem 0;
+    }
+
+    .footer-section h5 {
+        font-size: 1.4rem;
+        text-align: center;
+        display: block;
+        margin-bottom: 1.5rem;
+    }
+
+    .footer-section h5::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .contact-info {
+        text-align: left;
+        padding: 0 1rem;
+    }
+
+    .contact-info p {
+        justify-content: flex-start;
+        font-size: 1rem;
+        margin-bottom: 1.2rem;
+        padding: 0.5rem;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+        transition: all 0.3s ease;
+    }
+
+    .contact-info p:active {
+        background: rgba(255, 255, 255, 0.2);
+        transform: translateX(5px);
+    }
+
+    .contact-info i {
+        margin-right: 15px;
+        font-size: 1.4rem;
+        min-width: 25px;
+        text-align: center;
+    }
+
+    .map-container {
+        height: 200px;
+        margin-bottom: 1.5rem;
+    }
+
+    .social-links {
+        margin-top: 1rem;
+        gap: 1.2rem;
+    }
+
+    .social-links a {
+        width: 60px;
+        height: 60px;
+        font-size: 1.6rem;
+    }
+}
+
+/* Para pantallas muy pequeñas */
+@media (max-width: 480px) {
+    .contact-info {
+        padding: 0 0.5rem;
+    }
+
+    .contact-info p {
+        font-size: 0.95rem;
+        padding: 0.6rem 0.8rem;
+    }
+
+    .contact-info i {
+        font-size: 1.3rem;
+        margin-right: 12px;
+    }
+}
+
+/* Animación de entrada */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.footer-section {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.footer-section:nth-child(1) { animation-delay: 0.1s; }
+.footer-section:nth-child(2) { animation-delay: 0.2s; }
+.footer-section:nth-child(3) { animation-delay: 0.3s; }
+
+/* Optimización para dispositivos táctiles */
+@media (hover: none) and (pointer: coarse) {
+    /* Aumentar área táctil en móviles */
+    .social-links a {
+        width: 60px;
+        height: 60px;
+        font-size: 1.6rem;
+    }
+    
+    /* Asegurar que las animaciones funcionen en táctil */
+    .contact-info p {
+        cursor: pointer;
+    }
+}
+/* footer mejorado------------------------------------------------------------------------------*/
 
 
 
@@ -416,5 +777,31 @@ footer a {
     
     .service-card .card-body {
         padding: 1.5rem;
+    }
+}
+
+/* En móviles, ajustes completos */
+@media (max-width: 991px) {
+    .navbar-nav {
+        margin-left: 0 !important;
+        gap: 0.3rem !important; /* Reducir espacio entre items */
+    }
+    
+    .nav-link {
+        font-size: 1.2rem !important;
+        padding: 0.3rem 0;
+    }
+    
+    .btn-login {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        width: 100%;
+        text-align: center;
+    }
+    
+    /* Hacer el menú desplegable scrolleable si es muy largo */
+    .navbar-collapse {
+        max-height: 75vh;
+        overflow-y: auto;
     }
 }

@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Página de Inicio - Sitio Web Profesional</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/fag.css" rel="stylesheet" />
+    <meta
+      name="description"
+      content="Descripción concisa y atractiva de tu página web (máximo 160 caracteres). Palabras clave aquí."
+    />
+    <meta
+      name="keywords"
+      content="web profesional, programación, front-end, diseño web, (Tus temas clave)"
+    />
+    <meta name="author" content="Tu Nombre o Nombre de tu Empresa" />
+    <link rel="icon" type="image/png" href="imagenes/1.png" />
+
+    <!-- Bootstrap Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css"
+    />
+  </head>
+  <body>
+    <header>
+      <!-- Barra de navegación -->
+      <nav class="navbar navbar-expand-lg">
+        <div class="container d-flex ms-3">
+          <!-- Logo -->
+          <!-- Logo: reducimos un poco el margin-end para que no se separe -->
+          <a class="navbar-brand fw-bold me-2" ref="#">
+            <img
+              src="imagenes/logoia2.png"
+              alt="Logo"
+              class="logo-animado"
+              style="height: 82px; width: 186px"
+            />
+          </a>
+
+          <!-- Botón hamburguesa (visible en móviles) -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#menuPrincipal"
+            aria-controls="menuPrincipal"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Menú -->
+          <div
+            class="collapse navbar-collapse justify-content-center"
+            id="menuPrincipal"
+          >
+            <ul class="navbar-nav gap-5 ms-auto mx-auto text-center">
+              <li class="nav-item">
+                <a class="nav-link active" href="index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="servicios.html">Servicios</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="contacto.html">Contacto</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="solicitar.html">Solicitar</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="blog.html">Blog</a>
+              </li>
+            </ul>
+            <!-- Botón Login -->
+            <a href="#" class="btn-login ms-3 btn-lg">
+              <i class="bi bi-person-circle me-2"></i>Login
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section id="faq" class="py-5">
+        <div class="container">
+          <!-- Encabezado de la sección -->
+          <div class="faq-header text-center mb-5">
+            <h1 class="faq-main-title">Preguntas Frecuentes</h1>
+            <p class="faq-subtitle">
+              Encuentra respuestas rápidas a las dudas más comunes sobre
+              nuestros servicios
+            </p>
+          </div>
+
+          <!-- Buscador de preguntas (mejora UX) -->
+          <div class="faq-search-container mb-5">
+            <div class="search-box">
+              <input
+                type="search"
+                id="faqSearch"
+                class="search-input"
+                placeholder="🔍 Buscar en preguntas frecuentes..."
+                aria-label="Buscar preguntas frecuentes"
+              />
+            </div>
+          </div>
+
+          <!-- Accordion de preguntas -->
+          <div class="faq-accordion-container">
+            <div class="accordion" id="faqAccordion">
+              <!-- Pregunta 1 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading1">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse1"
+                    aria-expanded="false"
+                    aria-controls="collapse1"
+                  >
+                    <span class="question-icon">❓</span>
+                    <span class="question-text"
+                      >¿Qué tipos de servicios de automatización ofrecen?</span
+                    >
+                  </button>
+                </h2>
+                <div
+                  id="collapse1"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="heading1"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body">
+                    <p>
+                      Ofrecemos soluciones completas de automatización
+                      industrial que incluyen:
+                    </p>
+                    <ul>
+                      <li>Automatización de procesos productivos</li>
+                      <li>Implementación de sistemas PLC y SCADA</li>
+                      <li>Robótica industrial</li>
+                      <li>Control de calidad automatizado</li>
+                      <li>Sistemas de monitoreo remoto</li>
+                    </ul>
+                    <p>
+                      Nuestros servicios están diseñados para aumentar la
+                      eficiencia, reducir costos operativos y mejorar la calidad
+                      de su producción.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Pregunta 2 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading2">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse2"
+                    aria-expanded="false"
+                    aria-controls="collapse2"
+                  >
+                    <span class="question-icon">⚡</span>
+                    <span class="question-text"
+                      >¿Con qué frecuencia debo realizar mantenimiento
+                      eléctrico?</span
+                    >
+                  </button>
+                </h2>
+                <div
+                  id="collapse2"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="heading2"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body">
+                    <p>
+                      La frecuencia del mantenimiento eléctrico depende de
+                      varios factores:
+                    </p>
+                    <ul>
+                      <li>
+                        <strong>Mantenimiento preventivo básico:</strong> Cada
+                        3-6 meses
+                      </li>
+                      <li>
+                        <strong>Inspección detallada:</strong> Cada 12 meses
+                      </li>
+                      <li>
+                        <strong>Industrias críticas:</strong> Cada 1-3 meses
+                      </li>
+                      <li>
+                        <strong>Termografía infrarroja:</strong> Cada 6-12 meses
+                      </li>
+                    </ul>
+                    <p>
+                      Recomendamos establecer un programa de mantenimiento
+                      preventivo personalizado según las características de su
+                      instalación, para evitar fallas costosas y garantizar la
+                      seguridad operativa.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Pregunta 3 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading3">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse3"
+                    aria-expanded="false"
+                    aria-controls="collapse3"
+                  >
+                    <span class="question-icon">🔧</span>
+                    <span class="question-text"
+                      >¿Qué incluye el servicio de mantenimiento mecánico?</span
+                    >
+                  </button>
+                </h2>
+                <div
+                  id="collapse3"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="heading3"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body">
+                    <p>
+                      Nuestro servicio de mantenimiento mecánico integral
+                      incluye:
+                    </p>
+                    <ul>
+                      <li>Inspección y diagnóstico de equipos</li>
+                      <li>Lubricación de componentes mecánicos</li>
+                      <li>Alineación de ejes y poleas</li>
+                      <li>Balanceo de elementos rotativos</li>
+                      <li>Reemplazo de rodamientos y sellos</li>
+                      <li>Ajuste de tensión en bandas y cadenas</li>
+                      <li>Análisis de vibraciones</li>
+                      <li>Documentación y reporte de actividades</li>
+                    </ul>
+                    <p>
+                      Trabajamos con equipos especializados y personal altamente
+                      capacitado para garantizar la máxima disponibilidad de sus
+                      activos.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Pregunta 4 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading4">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse4"
+                    aria-expanded="false"
+                    aria-controls="collapse4"
+                  >
+                    <span class="question-icon">⏱️</span>
+                    <span class="question-text"
+                      >¿Cuál es el tiempo de respuesta para emergencias?</span
+                    >
+                  </button>
+                </h2>
+                <div
+                  id="collapse4"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="heading4"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body">
+                    <p>
+                      Entendemos que las emergencias industriales requieren
+                      atención inmediata:
+                    </p>
+                    <ul>
+                      <li>
+                        <strong>Respuesta telefónica:</strong> Inmediata 24/7
+                      </li>
+                      <li>
+                        <strong>Diagnóstico remoto:</strong> En menos de 30
+                        minutos
+                      </li>
+                      <li>
+                        <strong>Presencia en sitio (Cali):</strong> 1-2 horas
+                      </li>
+                      <li><strong>Otras ciudades:</strong> 4-6 horas</li>
+                    </ul>
+                    <p>
+                      Contamos con un equipo técnico de guardia permanente y
+                      vehículos equipados con herramientas y repuestos de uso
+                      común para solucionar la mayoría de emergencias en la
+                      primera visita.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Pregunta 5 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading5">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse5"
+                    aria-expanded="false"
+                    aria-controls="collapse5"
+                  >
+                    <span class="question-icon">💰</span>
+                    <span class="question-text"
+                      >¿Cómo se realizan las cotizaciones de servicios?</span
+                    >
+                  </button>
+                </h2>
+                <div
+                  id="collapse5"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="heading5"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body">
+                    <p>
+                      Nuestro proceso de cotización es rápido y transparente:
+                    </p>
+                    <ol>
+                      <li>
+                        <strong>Solicitud:</strong> Complete el formulario en
+                        nuestra página o contáctenos directamente
+                      </li>
+                      <li>
+                        <strong>Evaluación inicial:</strong> Nuestro equipo
+                        analiza sus necesidades (24 horas)
+                      </li>
+                      <li>
+                        <strong>Visita técnica:</strong> Si es necesario,
+                        visitamos sus instalaciones sin costo
+                      </li>
+                      <li>
+                        <strong>Propuesta detallada:</strong> Recibe cotización
+                        con alcance, tiempos y costos (2-3 días)
+                      </li>
+                      <li>
+                        <strong>Ajustes:</strong> Adaptamos la propuesta según
+                        sus comentarios
+                      </li>
+                    </ol>
+                    <p>
+                      Todas nuestras cotizaciones incluyen: alcance detallado,
+                      cronograma, garantías, y condiciones comerciales claras.
+                      No hay costos ocultos.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Pregunta 6 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading6">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse6"
+                    aria-expanded="false"
+                    aria-controls="collapse6"
+                  >
+                    <span class="question-icon">📜</span>
+                    <span class="question-text"
+                      >¿Qué certificaciones y garantías ofrecen?</span
+                    >
+                  </button>
+                </h2>
+                <div
+                  id="collapse6"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="heading6"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body">
+                    <p>
+                      SEAM INGENIERÍA cumple con los más altos estándares de
+                      calidad:
+                    </p>
+                    <h4>Certificaciones:</h4>
+                    <ul>
+                      <li>Personal técnico certificado por fabricantes</li>
+                      <li>
+                        Cumplimiento RETIE y normativas eléctricas colombianas
+                      </li>
+                      <li>Normas de seguridad industrial ISO 45001</li>
+                      <li>Procedimientos según estándares internacionales</li>
+                    </ul>
+                    <h4>Garantías:</h4>
+                    <ul>
+                      <li>
+                        <strong>Mano de obra:</strong> 6-12 meses según el
+                        servicio
+                      </li>
+                      <li>
+                        <strong>Repuestos originales:</strong> Garantía del
+                        fabricante
+                      </li>
+                      <li><strong>Instalaciones nuevas:</strong> 12 meses</li>
+                      <li>
+                        <strong>Revisión gratuita:</strong> Post-servicio a los
+                        30 días
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CTA al final del FAQ -->
+          <div class="faq-cta text-center mt-5">
+            <h3 class="cta-title">¿No encontraste lo que buscabas?</h3>
+            <p class="cta-text">Nuestro equipo está listo para ayudarte</p>
+            <div class="cta-buttons">
+              <a href="contacto.html" class="btn-cta-primary">
+                <i class="bi bi-envelope-fill"></i> Contáctanos
+              </a>
+              <a href="solicitar.html" class="btn-cta-secondary">
+                <i class="bi bi-file-text-fill"></i> Solicitar Servicio
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- Columna 1: Información de la empresa -->
+          <!-- Columna 1: Información de la empresa -->
+          <div class="col-md-4 mb-4 mb-md-0 footer-section">
+            <h5 style="font-size: 1.5rem; font-weight: 600">SEAM INGENIERÍA</h5>
+            <div class="contact-info">
+              <p class="mb-2" style="font-size: 1.1rem; color: #000 !important">
+                <i
+                  class="bi bi-lightbulb-fill"
+                  style="color: #000 !important"
+                ></i>
+                Innovación, calidad y confianza.
+              </p>
+              <p class="mb-2" style="font-size: 1.1rem; color: #000 !important">
+                <i
+                  class="bi bi-telephone-fill"
+                  style="color: #000 !important"
+                ></i>
+                (2) 374 4545
+              </p>
+              <p class="mb-2" style="font-size: 1.1rem; color: #000 !important">
+                <i class="bi bi-phone-fill" style="color: #000 !important"></i>
+                3017979077-3207552496-311 7191963
+              </p>
+              <p class="mb-2" style="font-size: 1.1rem; color: #000 !important">
+                <i
+                  class="bi bi-geo-alt-fill"
+                  style="color: #000 !important"
+                ></i>
+                Cali, Valle del Cauca, Colombia
+              </p>
+            </div>
+          </div>
+          <!-- Columna 2: Mapa -->
+          <div class="col-md-4 mb-4 mb-md-0 footer-section">
+            <div class="map-container">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3982.5034416842186!2d-76.51546302603748!3d3.4700122510985643!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e30a63089507a79%3A0x92acb8bc88159ea7!2sSEAM%20Ingenier%C3%ADa%20E.U.!5e0!3m2!1ses!2sco!4v1762307461833!5m2!1ses!2sco"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              >
+              </iframe>
+            </div>
+          </div>
+
+          <!-- Columna 3: Redes sociales -->
+          <div class="col-md-4 footer-section">
+            <h5 class="text-center">Síguenos</h5>
+            <div class="social-links">
+              <a href="#" class="facebook" title="Facebook">
+                <i class="bi bi-facebook"></i>
+              </a>
+              <a href="#" class="instagram" title="Instagram">
+                <i class="bi bi-instagram"></i>
+              </a>
+              <a href="#" class="whatsapp" title="WhatsApp">
+                <i class="bi bi-whatsapp"></i>
+              </a>
+              <a href="#" class="linkedin" title="LinkedIn">
+                <i class="bi bi-linkedin"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-bottom">
+          <div class="text-center">
+            <p>© 2025 SEAM INGENIERÍA — Todos los derechos reservados.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="javascript/bootstrap.bundle.min.js"></script>
+    <script src="javascript/fag.js"></script>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

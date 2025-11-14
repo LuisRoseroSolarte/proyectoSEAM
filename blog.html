@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Página de Inicio - Sitio Web Profesional</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/blog.css" rel="stylesheet" />
+    <meta
+      name="description"
+      content="Descripción concisa y atractiva de tu página web (máximo 160 caracteres). Palabras clave aquí."
+    />
+    <meta
+      name="keywords"
+      content="web profesional, programación, front-end, diseño web, (Tus temas clave)"
+    />
+    <meta name="author" content="Tu Nombre o Nombre de tu Empresa" />
+    <link rel="icon" type="image/png" href="imagenes/1.png" />
+
+    <!-- Bootstrap Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <!-- Barra de navegación -->
+      <nav class="navbar navbar-expand-lg">
+        <div class="container d-flex ms-3">
+          <!-- Logo -->
+          <!-- Logo: reducimos un poco el margin-end para que no se separe -->
+          <a class="navbar-brand fw-bold me-2" ref="#">
+            <img
+              src="imagenes/logoia2.png"
+              alt="Logo"
+              class="logo-animado"
+              style="height: 82px; width: 186px"
+            />
+          </a>
+
+          <!-- Botón hamburguesa (visible en móviles) -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#menuPrincipal"
+            aria-controls="menuPrincipal"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Menú -->
+          <div
+            class="collapse navbar-collapse justify-content-center"
+            id="menuPrincipal"
+          >
+            <ul class="navbar-nav gap-5 ms-auto mx-auto text-center">
+              <li class="nav-item">
+                <a class="nav-link active" href="index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="servicios.html">Servicios</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contacto.html">Contacto</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="solicitar.html">Solicitar</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="fag.html">FAQ</a>
+              </li>
+            </ul>
+            <!-- Botón Login -->
+            <a href="#" class="btn-login ms-3 btn-lg">
+              <i class="bi bi-person-circle me-2"></i>Login
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="blog" class="py-5">
+        <div class="container">
+          <!-- Encabezado del Blog -->
+          <div class="blog-header text-center mb-5">
+            <h1 class="blog-main-title">Blog & Noticias</h1>
+            <p class="blog-subtitle">
+              Mantente informado sobre las últimas tendencias en automatización,
+              mantenimiento industrial y tecnología
+            </p>
+          </div>
+
+          <!-- Filtros y Búsqueda -->
+          <div class="blog-filters-section mb-5">
+            <div class="row align-items-center g-3">
+              <!-- Buscador -->
+              <div class="col-lg-6">
+                <div class="search-box">
+                  <input
+                    type="search"
+                    id="blogSearch"
+                    class="search-input"
+                    placeholder="🔍 Buscar artículos..."
+                    aria-label="Buscar artículos del blog"
+                  />
+                </div>
+              </div>
+
+              <!-- Filtro por categoría -->
+              <div class="col-lg-6">
+                <div class="filter-buttons">
+                  <button class="filter-btn active" data-category="all">
+                    Todos
+                  </button>
+                  <button class="filter-btn" data-category="automatizacion">
+                    Automatización
+                  </button>
+                  <button class="filter-btn" data-category="mantenimiento">
+                    Mantenimiento
+                  </button>
+                  <button class="filter-btn" data-category="tecnologia">
+                    Tecnología
+                  </button>
+                  <button class="filter-btn" data-category="neumatica">
+                    Nuematica
+                  </button>
+                  <button class="filter-btn" data-category="montajes">
+                    Montajes
+                  </button>
+                  <button class="filter-btn" data-category="hidraulica">
+                    Hidraulica
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Grid de Artículos -->
+          <div class="blog-grid">
+            <!-- Artículo 1 -->
+            <article class="blog-card" data-category="automatizacion">
+              <div class="card-image-container">
+                <img
+                  src="imagenes/automation.jpg"
+                  alt="Automatización Industrial"
+                  class="card-image"
+                  loading="lazy"
+                />
+                <span class="card-category">Automatización</span>
+              </div>
+              <div class="card-content">
+                <div class="card-meta">
+                  <span class="meta-date">
+                    <i class="bi bi-calendar3"></i> 15 Enero 2025
+                  </span>
+                  <span class="meta-reading-time">
+                    <i class="bi bi-clock"></i> 5 min lectura
+                  </span>
+                </div>
+                <h2 class="card-title">
+                  La Automatización Industrial: Tendencias 2025
+                </h2>
+                <p class="card-excerpt">
+                  Descubre las tecnologías emergentes que están transformando la
+                  industria manufacturera y cómo pueden beneficiar a tu empresa.
+                </p>
+                <a href="articulo.html?id=automatizacion" class="card-link">
+                  Leer más <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </article>
+
+            <!-- Artículo 2 -->
+            <article class="blog-card" data-category="mantenimiento">
+              <div class="card-image-container">
+                <img
+                  src="imagenes/maintanace electric.webp"
+                  alt="Mantenimiento Eléctrico"
+                  class="card-image"
+                  loading="lazy"
+                />
+                <span class="card-category card-category-mantenimiento"
+                  >Mantenimiento</span
+                >
+              </div>
+              <div class="card-content">
+                <div class="card-meta">
+                  <span class="meta-date">
+                    <i class="bi bi-calendar3"></i> 10 Enero 2025
+                  </span>
+                  <span class="meta-reading-time">
+                    <i class="bi bi-clock"></i> 4 min lectura
+                  </span>
+                </div>
+                <h2 class="card-title">
+                  Controladores Lógicos: Guía Completa para la Industria
+                </h2>
+                <p class="card-excerpt">
+                  Todo lo que necesitas saber sobre PLCs, su funcionamiento,
+                  aplicaciones y cómo seleccionar el adecuado para tu proyecto.
+                </p>
+                <a href="articulo.html?id=mantenimiento" class="card-link">
+                  Leer más <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </article>
+
+            <!-- Artículo 3 -->
+            <article class="blog-card" data-category="tecnologia">
+              <div class="card-image-container">
+                <img
+                  src="imagenes/IA.jpg"
+                  alt="Instrumentación Inteligente"
+                  class="card-image"
+                  loading="lazy"
+                />
+                <span class="card-category card-category-tecnologia"
+                  >Tecnología</span
+                >
+              </div>
+              <div class="card-content">
+                <div class="card-meta">
+                  <span class="meta-date">
+                    <i class="bi bi-calendar3"></i> 5 Enero 2025
+                  </span>
+                  <span class="meta-reading-time">
+                    <i class="bi bi-clock"></i> 6 min lectura
+                  </span>
+                </div>
+                <h2 class="card-title">
+                  Instrumentación Inteligente en la Industria 4.0
+                </h2>
+                <p class="card-excerpt">
+                  Los sensores y sistemas de medición inteligentes están
+                  revolucionando el control de procesos industriales.
+                </p>
+                <a href="articulo.html?id=tecnologia" class="card-link">
+                  Leer más <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </article>
+
+            <!-- Artículo 4 -->
+            <article class="blog-card" data-category="neumatica">
+              <div class="card-image-container">
+                <img
+                  src="imagenes/neumatic.jpg"
+                  alt="Automatización del Futuro"
+                  class="card-image"
+                  loading="lazy"
+                />
+                <span class="card-category">Neumatica</span>
+              </div>
+              <div class="card-content">
+                <div class="card-meta">
+                  <span class="meta-date">
+                    <i class="bi bi-calendar3"></i> 28 Diciembre 2024
+                  </span>
+                  <span class="meta-reading-time">
+                    <i class="bi bi-clock"></i> 7 min lectura
+                  </span>
+                </div>
+                <h2 class="card-title">
+                  La neumática en los procesos industriales
+                </h2>
+                <p class="card-excerpt">
+                  Cómo la inteligencia artificial está transformando los
+                  sistemas de automatización industrial para hacerlos más
+                  eficientes.
+                </p>
+                <a href="articulo.html?id=neumatica" class="card-link">
+                  Leer más <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </article>
+
+            <!-- Artículo 5 -->
+            <article class="blog-card" data-category="montajes">
+              <div class="card-image-container">
+                <img
+                  src="imagenes/maintanace electric.webp"
+                  alt="Mantenimiento Predictivo"
+                  class="card-image"
+                  loading="lazy"
+                />
+                <span class="card-category card-category-mantenimiento"
+                  >Montajes</span
+                >
+              </div>
+              <div class="card-content">
+                <div class="card-meta">
+                  <span class="meta-date">
+                    <i class="bi bi-calendar3"></i> 20 Diciembre 2024
+                  </span>
+                  <span class="meta-reading-time">
+                    <i class="bi bi-clock"></i> 5 min lectura
+                  </span>
+                </div>
+                <h2 class="card-title">
+                  Mantenimiento Predictivo: Ahorra Costos y Tiempo
+                </h2>
+                <p class="card-excerpt">
+                  Implementa estrategias de mantenimiento predictivo para
+                  reducir paros no planificados y optimizar recursos.
+                </p>
+                <a href="articulo.html?id=mantenimiento" class="card-link">
+                  Leer más <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </article>
+
+            <!-- Artículo 6 -->
+            <article class="blog-card" data-category="hidraulica">
+              <div class="card-image-container">
+                <img
+                  src="imagenes/automation.jpg"
+                  alt="IoT Industrial"
+                  class="card-image"
+                  loading="lazy"
+                />
+                <span class="card-category card-category-tecnologia"
+                  >Hidraulica</span
+                >
+              </div>
+              <div class="card-content">
+                <div class="card-meta">
+                  <span class="meta-date">
+                    <i class="bi bi-calendar3"></i> 15 Diciembre 2024
+                  </span>
+                  <span class="meta-reading-time">
+                    <i class="bi bi-clock"></i> 8 min lectura
+                  </span>
+                </div>
+                <h2 class="card-title">
+                  IoT Industrial: Conectando tu Planta del Futuro
+                </h2>
+                <p class="card-excerpt">
+                  El Internet de las Cosas industrial permite monitoreo en
+                  tiempo real y toma de decisiones basada en datos.
+                </p>
+                <a href="articulo.html?id=tecnologia" class="card-link">
+                  Leer más <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <!-- Paginación 
+          <div class="blog-pagination">
+            <nav aria-label="Navegación de páginas">
+              <ul class="pagination-list">
+                <li class="pagination-item">
+                  <a
+                    href="#"
+                    class="pagination-link pagination-prev"
+                    aria-label="Página anterior"
+                  >
+                    <i class="bi bi-chevron-left"></i>
+                  </a>
+                </li>
+                <li class="pagination-item">
+                  <a href="#" class="pagination-link active" aria-current="page"
+                    >1</a
+                  >
+                </li>
+                <li class="pagination-item">
+                  <a href="#" class="pagination-link">2</a>
+                </li>
+                <li class="pagination-item">
+                  <a href="#" class="pagination-link">3</a>
+                </li>
+                <li class="pagination-item">
+                  <a
+                    href="#"
+                    class="pagination-link pagination-next"
+                    aria-label="Página siguiente"
+                  >
+                    <i class="bi bi-chevron-right"></i>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>-->
+
+          <!-- Newsletter CTA -->
+          <div class="newsletter-section mt-5">
+            <div class="newsletter-container">
+              <div class="newsletter-icon">📬</div>
+              <h3 class="newsletter-title">Suscríbete a Nuestro Newsletter</h3>
+              <p class="newsletter-text">
+                Recibe las últimas noticias y artículos directamente en tu
+                correo
+              </p>
+              <form class="newsletter-form">
+                <input
+                  type="email"
+                  class="newsletter-input"
+                  placeholder="tu@email.com"
+                  required
+                  aria-label="Correo electrónico para newsletter"
+                />
+                <button type="submit" class="newsletter-button">
+                  Suscribirse
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- Columna 1: Información de la empresa -->
+          <!-- Columna 1: Información de la empresa -->
+          <div class="col-md-4 mb-4 mb-md-0 footer-section">
+            <h5 style="font-size: 1.5rem; font-weight: 600">SEAM INGENIERÍA</h5>
+            <div class="contact-info">
+              <p class="mb-2" style="font-size: 1.1rem; color: #000 !important">
+                <i
+                  class="bi bi-lightbulb-fill"
+                  style="color: #000 !important"
+                ></i>
+                Innovación, calidad y confianza.
+              </p>
+              <p class="mb-2" style="font-size: 1.1rem; color: #000 !important">
+                <i
+                  class="bi bi-telephone-fill"
+                  style="color: #000 !important"
+                ></i>
+                (2) 374 4545
+              </p>
+              <p class="mb-2" style="font-size: 1.1rem; color: #000 !important">
+                <i class="bi bi-phone-fill" style="color: #000 !important"></i>
+                3017979077-3207552496-311 7191963
+              </p>
+              <p class="mb-2" style="font-size: 1.1rem; color: #000 !important">
+                <i
+                  class="bi bi-geo-alt-fill"
+                  style="color: #000 !important"
+                ></i>
+                Cali, Valle del Cauca, Colombia
+              </p>
+            </div>
+          </div>
+          <!-- Columna 2: Mapa -->
+          <div class="col-md-4 mb-4 mb-md-0 footer-section">
+            <div class="map-container">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3982.5034416842186!2d-76.51546302603748!3d3.4700122510985643!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e30a63089507a79%3A0x92acb8bc88159ea7!2sSEAM%20Ingenier%C3%ADa%20E.U.!5e0!3m2!1ses!2sco!4v1762307461833!5m2!1ses!2sco"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              >
+              </iframe>
+            </div>
+          </div>
+
+          <!-- Columna 3: Redes sociales -->
+          <div class="col-md-4 footer-section">
+            <h5 class="text-center">Síguenos</h5>
+            <div class="social-links">
+              <a href="#" class="facebook" title="Facebook">
+                <i class="bi bi-facebook"></i>
+              </a>
+              <a href="#" class="instagram" title="Instagram">
+                <i class="bi bi-instagram"></i>
+              </a>
+              <a href="#" class="whatsapp" title="WhatsApp">
+                <i class="bi bi-whatsapp"></i>
+              </a>
+              <a href="#" class="linkedin" title="LinkedIn">
+                <i class="bi bi-linkedin"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-bottom">
+          <div class="text-center">
+            <p>© 2025 SEAM INGENIERÍA — Todos los derechos reservados.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="javascript/bootstrap.bundle.min.js"></script>
+
+    <script src="javascript/blog.js"></script>
+  </body>
+</html>
