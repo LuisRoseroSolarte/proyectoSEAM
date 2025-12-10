@@ -35,13 +35,13 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css"
     />
   </head>
+
   <body>
     <header>
       <!-- Barra de navegación -->
       <nav class="navbar navbar-expand-lg">
         <div class="container d-flex ms-3">
           <!-- Logo -->
-          <!-- Logo: reducimos un poco el margin-end para que no se separe -->
           <a class="navbar-brand fw-bold me-2" ref="#">
             <img
               src="imagenes/logoia2.png"
@@ -89,7 +89,7 @@
               </li>
             </ul>
             <!-- Botón Login -->
-            <a href="#" class="btn-login ms-3 btn-lg">
+            <a href="login.php" class="btn-login ms-3 btn-lg">
               <i class="bi bi-person-circle me-2"></i>Login
             </a>
           </div>
@@ -108,15 +108,22 @@
             </p>
           </div>
 
+          <!-- AGREGADO: Área para mensajes de éxito/error -->
+          <div
+            id="mensajeRespuesta"
+            style="
+              display: none;
+              padding: 15px;
+              border-radius: 8px;
+              margin-bottom: 20px;
+              text-align: center;
+              font-weight: 600;
+            "
+          ></div>
+
           <!-- Formulario -->
           <div class="form-wrapper">
-            <form
-              id="solicitudForm"
-              class="solicitud-form"
-              method="POST"
-              action="/enviar-solicitud"
-              novalidate
-            >
+            <form id="solicitudForm" class="solicitud-form">
               <!-- Tipo de Servicio (Radio Buttons) -->
               <fieldset class="form-group mb-4">
                 <legend class="form-label">Tipo de Servicio Requerido *</legend>
@@ -144,16 +151,69 @@
                   <div class="radio-item">
                     <input
                       type="radio"
-                      id="mantenimiento_electrico"
+                      id="termografia"
                       name="tipo_servicio"
-                      value="mantenimiento_electrico"
+                      value="termografia"
                       class="radio-input"
                       required
                       aria-required="true"
                     />
-                    <label for="mantenimiento_electrico" class="radio-label">
+                    <label for="termografia" class="radio-label">
+                      <span class="radio-icon">🌡️</span>
+                      <span class="radio-text">Termografía</span>
+                    </label>
+                  </div>
+
+                  <div class="radio-item">
+                    <input
+                      type="radio"
+                      id="asistencia_tecnica"
+                      name="tipo_servicio"
+                      value="asistencia_tecnica"
+                      class="radio-input"
+                      required
+                      aria-required="true"
+                    />
+                    <label for="asistencia_tecnica" class="radio-label">
+                      <span class="radio-icon">🛠️</span>
+                      <span class="radio-text"
+                        >Asistencia y Servicio Técnico</span
+                      >
+                    </label>
+                  </div>
+
+                  <div class="radio-item">
+                    <input
+                      type="radio"
+                      id="mantenimientos"
+                      name="tipo_servicio"
+                      value="mantenimientos"
+                      class="radio-input"
+                      required
+                      aria-required="true"
+                    />
+                    <label for="mantenimientos" class="radio-label">
+                      <span class="radio-icon">🔧</span>
+                      <span class="radio-text"
+                        >Mantenimientos Preventivos - Predictivos y
+                        Correctivos</span
+                      >
+                    </label>
+                  </div>
+
+                  <div class="radio-item">
+                    <input
+                      type="radio"
+                      id="montaje_electrico"
+                      name="tipo_servicio"
+                      value="montaje_electrico"
+                      class="radio-input"
+                      required
+                      aria-required="true"
+                    />
+                    <label for="montaje_electrico" class="radio-label">
                       <span class="radio-icon">⚡</span>
-                      <span class="radio-text">Mantenimiento Eléctrico</span>
+                      <span class="radio-text">Montaje Eléctrico</span>
                     </label>
                   </div>
 
@@ -168,8 +228,93 @@
                       aria-required="true"
                     />
                     <label for="mantenimiento_mecanico" class="radio-label">
-                      <span class="radio-icon">🔧</span>
+                      <span class="radio-icon">⚙️</span>
                       <span class="radio-text">Mantenimiento Mecánico</span>
+                    </label>
+                  </div>
+
+                  <div class="radio-item">
+                    <input
+                      type="radio"
+                      id="montaje_neumatico"
+                      name="tipo_servicio"
+                      value="montaje_neumatico"
+                      class="radio-input"
+                      required
+                      aria-required="true"
+                    />
+                    <label for="montaje_neumatico" class="radio-label">
+                      <span class="radio-icon">💨</span>
+                      <span class="radio-text">Montaje Neumático</span>
+                    </label>
+                  </div>
+
+                  <div class="radio-item">
+                    <input
+                      type="radio"
+                      id="montaje_hidraulico"
+                      name="tipo_servicio"
+                      value="montaje_hidraulico"
+                      class="radio-input"
+                      required
+                      aria-required="true"
+                    />
+                    <label for="montaje_hidraulico" class="radio-label">
+                      <span class="radio-icon">💧</span>
+                      <span class="radio-text">Montaje Hidráulico</span>
+                    </label>
+                  </div>
+
+                  <div class="radio-item">
+                    <input
+                      type="radio"
+                      id="servicios_metalmecanicos"
+                      name="tipo_servicio"
+                      value="servicios_metalmecanicos"
+                      class="radio-input"
+                      required
+                      aria-required="true"
+                    />
+                    <label for="servicios_metalmecanicos" class="radio-label">
+                      <span class="radio-icon">🔩</span>
+                      <span class="radio-text">Servicios Metalmecánicos</span>
+                    </label>
+                  </div>
+
+                  <div class="radio-item">
+                    <input
+                      type="radio"
+                      id="pintura_silos"
+                      name="tipo_servicio"
+                      value="pintura_silos"
+                      class="radio-input"
+                      required
+                      aria-required="true"
+                    />
+                    <label for="pintura_silos" class="radio-label">
+                      <span class="radio-icon">🎨</span>
+                      <span class="radio-text"
+                        >Servicios de Pintura de Silos y Equipos</span
+                      >
+                    </label>
+                  </div>
+
+                  <div class="radio-item">
+                    <input
+                      type="radio"
+                      id="desmonte_transporte_izaje"
+                      name="tipo_servicio"
+                      value="desmonte_transporte_izaje"
+                      class="radio-input"
+                      required
+                      aria-required="true"
+                    />
+                    <label for="desmonte_transporte_izaje" class="radio-label">
+                      <span class="radio-icon">🏗️</span>
+                      <span class="radio-text"
+                        >Desmonte - Transporte e Izaje de Silos y Equipos
+                        Industriales</span
+                      >
                     </label>
                   </div>
                 </div>
@@ -308,11 +453,12 @@
               <div class="form-group mb-3">
                 <button
                   type="submit"
+                  id="btnEnviar"
                   class="btn-submit"
                   aria-label="Enviar solicitud de servicio"
                 >
                   <span class="btn-icon">📩</span>
-                  ENVIAR SOLICITUD
+                  <span id="btnTexto">ENVIAR SOLICITUD</span>
                 </button>
               </div>
 
@@ -332,7 +478,6 @@
     <footer>
       <div class="container">
         <div class="row align-items-center">
-          <!-- Columna 1: Información de la empresa -->
           <!-- Columna 1: Información de la empresa -->
           <div class="col-md-4 mb-4 mb-md-0 footer-section">
             <h5 style="font-size: 1.5rem; font-weight: 600">SEAM INGENIERÍA</h5>
@@ -405,8 +550,134 @@
         </div>
       </div>
     </footer>
-    <script src="javascript/bootstrap.bundle.min.js"></script>
 
+    <script src="javascript/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>
+
+    <!-- SCRIPT CORREGIDO PARA ENVIAR EL FORMULARIO -->
+    <script>
+      // Contador de caracteres
+      const textarea = document.getElementById("descripcion");
+      const charCount = document.getElementById("charCount");
+
+      if (textarea && charCount) {
+        textarea.addEventListener("input", function () {
+          charCount.textContent = this.value.length;
+        });
+      }
+
+      // Establecer fecha mínima
+      const fechaInput = document.getElementById("fecha_atencion");
+      if (fechaInput) {
+        const hoy = new Date().toISOString().split("T")[0];
+        fechaInput.setAttribute("min", hoy);
+      }
+
+      // Manejo del formulario
+      const form = document.getElementById("solicitudForm");
+      const btnEnviar = document.getElementById("btnEnviar");
+      const btnTexto = document.getElementById("btnTexto");
+      const mensajeRespuesta = document.getElementById("mensajeRespuesta");
+
+      form.addEventListener("submit", async function (e) {
+        e.preventDefault();
+
+        // Validar formulario
+        if (!form.checkValidity()) {
+          // Marcar campos inválidos
+          Array.from(form.elements).forEach((element) => {
+            if (element.required && !element.validity.valid) {
+              element.classList.add("is-invalid");
+            }
+          });
+
+          mensajeRespuesta.style.display = "block";
+          mensajeRespuesta.style.backgroundColor = "#f8d7da";
+          mensajeRespuesta.style.color = "#721c24";
+          mensajeRespuesta.textContent =
+            "❌ Por favor complete todos los campos obligatorios";
+          mensajeRespuesta.scrollIntoView({
+            behavior: "smooth",
+            block: "center",
+          });
+          return;
+        }
+
+        // Deshabilitar botón y mostrar loading
+        btnEnviar.disabled = true;
+        btnTexto.textContent = "ENVIANDO...";
+        mensajeRespuesta.style.display = "none";
+
+        const formData = new FormData(form);
+
+        try {
+          console.log("Enviando formulario a procesar-solicitud.php...");
+
+          const response = await fetch("procesar-solicitud.php", {
+            method: "POST",
+            body: formData,
+          });
+
+          console.log("Respuesta recibida:", response.status);
+
+          // Verificar si la respuesta es JSON
+          const contentType = response.headers.get("content-type");
+          if (!contentType || !contentType.includes("application/json")) {
+            throw new Error("La respuesta no es JSON válido");
+          }
+
+          const result = await response.json();
+          console.log("Resultado:", result);
+
+          // Mostrar mensaje
+          mensajeRespuesta.style.display = "block";
+
+          if (result.success) {
+            mensajeRespuesta.style.backgroundColor = "#d4edda";
+            mensajeRespuesta.style.color = "#155724";
+            mensajeRespuesta.textContent = "✅ " + result.message;
+            form.reset();
+            charCount.textContent = "0";
+          } else {
+            mensajeRespuesta.style.backgroundColor = "#f8d7da";
+            mensajeRespuesta.style.color = "#721c24";
+            mensajeRespuesta.textContent = "❌ " + result.message;
+          }
+
+          // Scroll al mensaje
+          mensajeRespuesta.scrollIntoView({
+            behavior: "smooth",
+            block: "center",
+          });
+        } catch (error) {
+          console.error("Error:", error);
+          mensajeRespuesta.style.display = "block";
+          mensajeRespuesta.style.backgroundColor = "#f8d7da";
+          mensajeRespuesta.style.color = "#721c24";
+          mensajeRespuesta.textContent =
+            "❌ Error de conexión: " +
+            error.message +
+            ". Por favor, inténtelo nuevamente.";
+          mensajeRespuesta.scrollIntoView({
+            behavior: "smooth",
+            block: "center",
+          });
+        } finally {
+          // Rehabilitar botón
+          btnEnviar.disabled = false;
+          btnTexto.textContent = "ENVIAR SOLICITUD";
+        }
+      });
+
+      // Remover clase de error al escribir
+      form.addEventListener("input", function (e) {
+        if (
+          e.target.classList.contains("is-invalid") &&
+          e.target.validity.valid
+        ) {
+          e.target.classList.remove("is-invalid");
+        }
+      });
+    </script>
   </body>
 </html>
